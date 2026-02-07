@@ -1,0 +1,40 @@
+{
+  "dataset_A_samples": 804,
+  "dataset_B_samples": 959,
+  "total_samples": 1763,
+  "train_ratio": 0.3,
+  "test_ratio": 0.7,
+  "sequence_length_T": 150,
+  "channels_C": 17,
+  "device_used_for_training": "cuda",
+  "seed": 42,
+  "acc_tol_for_curve": 2.0,
+  "transformer_config": {
+    "d_model": 128,
+    "nhead": 4,
+    "num_layers": 6,
+    "dim_ff": 256,
+    "dropout": 0.2
+  },
+  "training_config": {
+    "epochs": 150,
+    "batch_size": 8,
+    "lr": 0.0003,
+    "weight_decay": 0.0001,
+    "sched_patience": 8,
+    "early_stop_patience": 30
+  },
+  "final_metrics": {
+    "test_MAE": 0.8806166052818298,
+    "test_RMSE": 1.1141493320465088,
+    "test_R2": 0.4109429717063904,
+    "Acc@1": 0.6421052631578947,
+    "Acc@2": 0.9392712550607287,
+    "Acc@3": 0.9838056680161943,
+    "Params": 797569,
+    "Model_MB": 4.047046661376953,
+    "Latency_ms": 10.997439998512467,
+    "Est_RAM_MB_B1": 9.127452850341797,
+    "model_path": "./heavy_tf_30_70_dual_dataset\\tf_best_model.pt"
+  }
+}
