@@ -19,13 +19,13 @@ DATA_DEFAULT_DIR = r"D:\RESEARCH\Oxygen_Saturation_Estimator"   # <-- your datas
 LOG_DIR         = "final"
 os.makedirs(LOG_DIR, exist_ok=True)
 
-EPOCHS          = 200
+EPOCHS          = 300
 BATCH           = 32
 LR              = 3e-4
-WD              = 1e-4
-PATIENCE        = 40
-DROP            = 0.25
-DROP_PATH       = 0.10
+WD              = 5e-5
+PATIENCE        = 60
+DROP            = 0.15
+DROP_PATH       = 0.05
 USE_Y_ZSCORE    = True
 CLIP_NORM       = 1.0
 SAVE_EPS        = 1e-4
@@ -34,17 +34,17 @@ SAVE_EPS        = 1e-4
 MAX_T           = 200
 
 # Augmentations
-TIME_MASK_P     = 0.30
+TIME_MASK_P     = 0.15
 TIME_MASK_MAX   = 20
-FEAT_MASK_P     = 0.30
+FEAT_MASK_P     = 0.15
 FEAT_MASK_MAX   = 4
-JITTER_STD      = 0.01
+JITTER_STD      = 0.005
 SHIFT_MAX       = 5
 
-# Model size (Tiny)
-D_MODEL         = 32
-N_HEADS         = 2
-N_LAYERS        = 4
+# Model size (Medium - Conservative)
+D_MODEL         = 48
+N_HEADS         = 3
+N_LAYERS        = 5
 
 
 # ================== DATASET =====================
